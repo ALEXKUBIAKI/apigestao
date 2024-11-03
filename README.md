@@ -1,6 +1,6 @@
 Endpoints de Usuários
 
-Usuarios------------------------------
+Usuarios
 -Registrar Usuário
 Método: POST
 URL: /users/register
@@ -34,7 +34,7 @@ Body (JSON):
 Método: DELETE
 URL: /users/:id
 Headers: Authorization: Bearer seu_token_JWT
------------------------------------------
+
 Endpoints de Produtos
 -Criar Produto
 Método: POST
@@ -63,10 +63,10 @@ Método: DELETE
 URL: /products/:id
 Headers: Authorization: Bearer seu_token_JWT
 
-Listar Produtos
+-Listar Produtos
 Método: GET
 URL: /products
------------------------------------------
+
 Endpoints de Pedidos
 -Criar Pedido
 Método: POST
@@ -93,7 +93,7 @@ Headers: Authorization: Bearer seu_token_JWT
 -Listar Pedidos
 Método: GET
 URL: /orders
--------------------------------------------
+
 para rodar o projeto
 
 Configurar o .env
