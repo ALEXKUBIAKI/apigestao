@@ -1,5 +1,5 @@
 Endpoints de Usuários
-
+ 
 Usuarios
 -Registrar Usuário
 Método: POST
