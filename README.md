@@ -1,117 +1,117 @@
-Endpoints de Usuários
- 
-Usuarios
--Registrar Usuário
-Método: POST
-URL: /users/register
-Body (JSON):
-{
-  "email": "test@example.com",
-  "password": "password123"
-}
--Login de Usuário
-Método: POST
-URL: /users/login
-Body (JSON):
-{
-  "email": "test@example.com",
-  "password": "password123"
-}
-Resposta (JSON):
-{
-  "token": "seu_token_JWT"
-}
--Atualizar Usuário
-Método: PUT
-URL: /users/:id
-Headers: Authorization: Bearer seu_token_JWT
-Body (JSON):
-{
-  "email": "novo_email@example.com",
-  "password": "nova_senha123"
-}
--Deletar Usuário
-Método: DELETE
-URL: /users/:id
-Headers: Authorization: Bearer seu_token_JWT
+Endpoints de Usuários</br>   
 
-Endpoints de Produtos
--Criar Produto
-Método: POST
-URL: /products
-Headers: Authorization: Bearer seu_token_JWT
-Body (JSON):
-{
-  "name": "Nome do Produto",
-  "price": 100.50,
-  "codigodebarras": "123456789"
-}
+Usuarios<br/>
+-Registrar Usuário<br/>
+Método: POST<br/>
+URL: /users/register<br/>
+Body (JSON):<br/>
+{<br/>
+  "email": "test@example.com",<br/>
+  "password": "password123"<br/>
+}<br/>
+-Login de Usuário<br/>
+Método: POST<br/>
+URL: /users/login<br/>
+Body (JSON):<br/>
+{<br/>
+  "email": "test@example.com",<br/>
+  "password": "password123"<br/>
+}<br/>
+Resposta (JSON):<br/>
+{<br/>
+  "token": "seu_token_JWT"<br/>
+}<br/>
+-Atualizar Usuário<br/>
+Método: PUT<br/>
+URL: /users/:id<br/>
+Headers: Authorization: Bearer seu_token_JWT<br/>
+Body (JSON):<br/>
+{<br/>
+  "email": "novo_email@example.com",<br/>
+  "password": "nova_senha123"<br/>
+}<br/>
+-Deletar Usuário<br/>
+Método: DELETE<br/>
+URL: /users/:id<br/>
+Headers: Authorization: Bearer seu_token_JWT<br/>
 
--Atualizar Produto
-Método: PUT
-URL: /products/:id
-Headers: Authorization: Bearer seu_token_JWT
-Body (JSON):
-{
-  "name": "Nome do Produto Atualizado",
-  "price": 150.75,
-  "codigodebarras": "987654321"
-}
+Endpoints de Produtos<br/>
+-Criar Produto<br/>
+Método: POST<br/>
+URL: /products<br/>
+Headers: Authorization: Bearer seu_token_JWT<br/>
+Body (JSON):<br/>
+{<br/>
+  "name": "Nome do Produto",<br/>
+  "price": 100.50,<br/>
+  "codigodebarras": "123456789"<br/>
+}<br/>
 
--Deletar Produto
-Método: DELETE
-URL: /products/:id
-Headers: Authorization: Bearer seu_token_JWT
+-Atualizar Produto<br/>
+Método: PUT<br/>
+URL: /products/:id<br/>
+Headers: Authorization: Bearer seu_token_JWT<br/>
+Body (JSON):<br/>
+{<br/>
+  "name": "Nome do Produto Atualizado",<br/>
+  "price": 150.75,<br/>
+  "codigodebarras": "987654321"<br/>
+}<br/>
 
--Listar Produtos
-Método: GET
-URL: /products
+-Deletar Produto<br/>
+Método: DELETE<br/>
+URL: /products/:id<br/>
+Headers: Authorization: Bearer seu_token_JWT<br/>
 
-Endpoints de Pedidos
--Criar Pedido
-Método: POST
-URL: /orders
-Headers: Authorization: Bearer seu_token_JWT
-Body (JSON):
-{
-  "productId": 1,
-  "quantity": 2
-}
--Atualizar Pedido
-Método: PUT
-URL: /orders/:id
-Headers: Authorization: Bearer seu_token_JWT
-Body (JSON):
-{
-  "productId": 1,
-  "quantity": 3
-}
--Deletar Pedido
-Método: DELETE
-URL: /orders/:id
-Headers: Authorization: Bearer seu_token_JWT
--Listar Pedidos
-Método: GET
-URL: /orders
+-Listar Produtos<br/>
+Método: GET<br/>
+URL: /products<br/>
 
-para rodar o projeto
+Endpoints de Pedidos<br/>
+-Criar Pedido<br/>
+Método: POST<br/>
+URL: /orders<br/>
+Headers: Authorization: Bearer seu_token_JWT<br/>
+Body (JSON):<br/>
+{<br/>
+  "productId": 1,<br/>
+  "quantity": 2<br/>
+}<br/>
+-Atualizar Pedido<br/>
+Método: PUT<br/>
+URL: /orders/:id<br/>
+Headers: Authorization: Bearer seu_token_JWT<br/>
+Body (JSON):<br/>
+{<br/>
+  "productId": 1,<br/>
+  "quantity": 3<br/>
+}<br/>
+-Deletar Pedido<br/>
+Método: DELETE<br/>
+URL: /orders/:id<br/>
+Headers: Authorization: Bearer seu_token_JWT<br/>
+-Listar Pedidos<br/>
+Método: GET<br/>
+URL: /orders<br/>
 
-Configurar o .env
-atualmente:
-DATABASE_URL="postgresql://postgres:alex@localhost:5432/postgres"
-JWT_SECRET="alex123456789012345"
-onde alex é a senha do postgres
+para rodar o projeto<br/>
 
-
-Executar Migrates
-npx prisma migrate dev --name init
-npx prisma generate
+Configurar o .env<br/>
+atualmente:<br/>
+DATABASE_URL="postgresql://postgres:alex@localhost:5432/postgres"<br/>
+JWT_SECRET="alex123456789012345"<br/>
+onde alex é a senha do postgres<br/>
 
 
-rodar projeto
-node src/app.js
+Executar Migrates<br/>
+npx prisma migrate dev --name init<br/>
+npx prisma generate<br/>
 
-executar testes
-npx jest
+
+rodar projeto<br/>
+node src/app.js<br/>
+
+executar testes<br/>
+npx jest<br/>
 
 
